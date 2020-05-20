@@ -1,12 +1,14 @@
+import { emailValidator } from './email-validator/email-validator';
 import { NgModule } from '@angular/core';
-import { NgxCustomValidatorsComponent } from './ngx-custom-validators.component';
 
-
+export const NgxCustomValidators = {
+  emailValidator,
+};
 
 @NgModule({
-  declarations: [NgxCustomValidatorsComponent],
+  declarations: [],
   imports: [
   ],
-  exports: [NgxCustomValidatorsComponent]
+  exports: []
 })
 export class NgxCustomValidatorsModule { }
