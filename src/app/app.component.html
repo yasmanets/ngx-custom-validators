@@ -1,17 +1,35 @@
-<div class="container">
-  <div>
-    {{title}}
+<div class="container mt-5">
+  <div class="title">
+    <h2>{{title}}</h2>
   </div>
 
   <form [formGroup]="testForm" class="form-container">
     <div class="row form-group">
-      <label for="email">Email *</label>
-      <input type="text" formControlName="email" class="form-control"/>
+      <div class="col-12">
+        <label for="email">Email *</label>
+      </div>
+      <div class="col-6">
+        <input type="text" formControlName="email" class="form-control"/>
+      </div>
+      <div class="col-6">
+        <div class="col-6" *ngIf="testForm.controls.email.hasError('email')" class="alert alert-danger">
+          The email format is wrong
+        </div>
+      </div>
     </div>
 
-    <div *ngIf="testForm.controls.email.hasError('email')" class="alert alert-danger">
-      <p>The email format is wrong</p>
+    <div class="row form-group">
+      <div class="col-12">
+        <label for="email">Url *</label>
+      </div>
+      <div class="col-6">
+        <input type="text" formControlName="url" class="form-control"/>
+      </div>
+      <div class="col-6">
+        <div class="col-6" *ngIf="testForm.controls.url.hasError('url')" class="alert alert-danger">
+          The url format is wrong
+        </div>
+      </div>
     </div>
-
   </form>
 </div>

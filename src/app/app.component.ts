@@ -1,5 +1,5 @@
 import { NgxCustomValidators } from './../../projects/ngx-custom-validators/src/lib/ngx-custom-validators.module';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -13,7 +13,7 @@ export class AppComponent implements OnInit {
   public testForm: FormGroup;
 
   constructor() {
-    this.title = 'ngx-custom-validators';
+    this.title = 'NgxCustomValidators';
   }
 
   ngOnInit() {
@@ -23,8 +23,17 @@ export class AppComponent implements OnInit {
   private setTestForm(): void {
     this.testForm = new FormGroup({
       email: new FormControl(null, {
-        validators: NgxCustomValidators.emailValidator({email: true}),
+        validators: Validators.compose([
+          NgxCustomValidators.emailValidator({email: true}),
+          Validators.required,
+        ]),
         updateOn: 'blur',
+      }),
+      url: new FormControl(null, {
+        validators: Validators.compose([
+          NgxCustomValidators.urlValidator({url: true})
+        ]),
+        updateOn: 'blur'
       }),
     });
   }
