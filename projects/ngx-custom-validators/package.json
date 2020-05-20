@@ -5,7 +5,7 @@
   "keywords": ["angular", "angular9", "angular-library", "validation-forms", "ReactiveForms", "FormControl", "typescript"],
   "homepage": "https://github.com/yasmanets/ngx-custom-validators#readme",
   "license": "MIT License",
-  "private": true,
+  "private": false,
   "author": "Yaser El Dabete Arribas",
   "repository": {
     "type": "git",
