@@ -23,18 +23,15 @@ export class AppComponent implements OnInit {
   private setTestForm(): void {
     this.testForm = new FormGroup({
       email: new FormControl(null, {
-        validators: Validators.compose([
-          NgxCustomValidators.emailValidator({email: true}),
-          Validators.required,
-        ]),
+        validators: NgxCustomValidators.emailValidator({email: true}),
         updateOn: 'blur',
       }),
       url: new FormControl(null, {
-        validators: Validators.compose([
-          NgxCustomValidators.urlValidator({url: true})
-        ]),
+        validators: NgxCustomValidators.urlValidator({url: true}),
         updateOn: 'blur'
       }),
+      image: new FormControl(null, NgxCustomValidators.fileExtensionValidator({image: true}, ['png', 'jpg', 'jpeg', 'png'])),
+      pdf: new FormControl(null, NgxCustomValidators.fileExtensionValidator({pdf: true}, ['pdf'])),
     });
   }
 }

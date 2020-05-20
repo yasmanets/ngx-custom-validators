@@ -31,5 +31,34 @@
         </div>
       </div>
     </div>
+
+    <div class="row form-group">
+      <div class="col-12">
+        <label for="image">Image *</label>
+      </div>
+      <div class="col-6">
+        <input type="file" formControlName="image" />
+      </div>
+      <div class="col-6">
+        <div *ngIf="testForm.controls.image.hasError('image')" class="alert alert-danger">
+          The image extension isn't allowed
+        </div>
+      </div>
+    </div>
+
+    <div class="row form-group">
+      <div class="col-12">
+        <label for="pdf">Document *</label>
+      </div>
+      <div class="col-6">
+        <input type="file" formControlName="pdf" />
+      </div>
+      <div class="col-6">
+        <div *ngIf="testForm.controls.pdf.hasError('pdf')" class="alert alert-danger">
+          The document extension isn't allowed
+        </div>
+      </div>
+    </div>
+
   </form>
 </div>
