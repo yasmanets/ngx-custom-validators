@@ -2,7 +2,7 @@ import { ValidationErrors, ValidatorFn, AbstractControl } from '@angular/forms';
 import * as C from '../constants';
 
 export const emailValidator = (error: ValidationErrors): ValidatorFn => {
-  return (email: AbstractControl): any => {
+  return (email: AbstractControl): {[key: string]: boolean} | null => {
     if (!email.value) {
       return null;
     }
