@@ -14,11 +14,8 @@ install:
 
 script:
   - npm run-script build
+  - npm run-script build-lib
 
-deploy:
-  provider: pages
-  skip_cleanup: true
-  github_token: $GITHUB_TOKEN
-  local_dir: dist/angular-github-pages-travis
-  on:
-    branch: master
+notifications:
+  email:
+    - yaser.earribas@gmail.com
