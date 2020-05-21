@@ -4,4 +4,7 @@ If you lose any validator, you can request its implementation or even implement 
 
 ### So angular-custom-validator is a simple library to validate all your forms :)
 
+---
+[![Build Status](https://travis-ci.com/yasmanets/ngx-custom-validators.svg?branch=master)](https://travis-ci.com/yasmanets/ngx-custom-validators)
+
 ### On build...
