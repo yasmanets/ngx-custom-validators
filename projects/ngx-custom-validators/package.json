@@ -1,5 +1,5 @@
 {
-  "name": "ngx-custom-validators",
+  "name": "angular-custom-validators",
   "version": "0.0.1",
   "description": "Simple library for validate all your forms :)",
   "keywords": ["angular", "angular9", "angular-library", "validation-forms", "ReactiveForms", "FormControl", "typescript"],
@@ -12,7 +12,8 @@
     "url": "https://github.com/yasmanets/ngx-custom-validators"
   },
   "peerDependencies": {
-    "@angular/common": "^8.2.14",
-    "@angular/core": "^8.2.14"
+    "@angular/common": "8.2.14",
+    "@angular/core": "8.2.14",
+    "@angular/forms": "8.2.14"
   }
 }
