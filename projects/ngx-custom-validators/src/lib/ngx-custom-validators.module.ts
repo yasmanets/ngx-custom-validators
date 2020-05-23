@@ -1,3 +1,4 @@
+import { cifValidator } from './cif-validator/cif-validator';
 import { dniValidator } from './dni-validator/dni-validator';
 import { ibanValidator } from './iban-validator/iban-validator';
 import { maxLengthValidator } from './maxLength-validator/maxLength-validator';
@@ -17,6 +18,7 @@ export const NgxCustomValidators = {
   maxLengthValidator,
   ibanValidator,
   dniValidator,
+  cifValidator,
 };
 
 @NgModule({
