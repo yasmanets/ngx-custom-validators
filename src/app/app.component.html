@@ -60,5 +60,19 @@
       </div>
     </div>
 
+    <div class="row form-group">
+      <div class="col-12">
+        <label for="pattern">Capital letters</label>
+      </div>
+      <div class="col-6">
+        <input type="text" formControlName="pattern" class="form-control" />
+      </div>
+      <div class="col-6">
+        <div *ngIf="testForm.controls.pattern.hasError('pattern')" class="alert alert-danger">
+          Only capital letters are allowed
+        </div>
+      </div>
+    </div>
+
   </form>
 </div>
