@@ -1,3 +1,5 @@
+import { maxLengthValidator } from './maxLength-validator/maxLength-validator';
+import { minLengthValidator } from './minLength-validator/minLength-validator';
 import { patternValidator } from './pattern-validator/pattern-validator';
 import { fileExtensionValidator } from './file-validator/file-validator';
 import { urlValidator } from './url-validator/url-validator';
@@ -9,6 +11,8 @@ export const NgxCustomValidators = {
   urlValidator,
   fileExtensionValidator,
   patternValidator,
+  minLengthValidator,
+  maxLengthValidator,
 };
 
 @NgModule({
