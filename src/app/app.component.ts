@@ -13,7 +13,7 @@ export class AppComponent implements OnInit {
   public testForm: FormGroup;
 
   constructor() {
-    this.title = 'NgxCustomValidators';
+    this.title = 'Angular Custom Validators';
   }
 
   ngOnInit() {
@@ -32,6 +32,24 @@ export class AppComponent implements OnInit {
       }),
       image: new FormControl(null, NgxCustomValidators.fileExtensionValidator({image: true}, ['png', 'jpg', 'jpeg', 'png'])),
       pdf: new FormControl(null, NgxCustomValidators.fileExtensionValidator({pdf: true}, ['pdf'])),
+      pattern: new FormControl(null, NgxCustomValidators.patternValidator({pattern: true}, /[A-Z]/)),
+      minLength: new FormControl(null, {
+        validators: NgxCustomValidators.minLengthValidator({minLength: true}, 6),
+        updateOn: 'blur'
+      }),
+      maxLength: new FormControl(null, NgxCustomValidators.maxLengthValidator({maxLength: true}, 10)),
+      iban: new FormControl(null, {
+        validators: NgxCustomValidators.ibanValidator({iban: true}),
+        updateOn: 'blur'
+      }),
+      dni: new FormControl(null, {
+        validators: NgxCustomValidators.dniValidator({dni: true}),
+        updateOn: 'blur'
+      }),
+      cif: new FormControl(null, {
+        validators: NgxCustomValidators.cifValidator({cif: true}),
+        updateOn: 'blur'
+      }),
     });
   }
 }

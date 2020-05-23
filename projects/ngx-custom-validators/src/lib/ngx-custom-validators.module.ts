@@ -1,3 +1,9 @@
+import { cifValidator } from './cif-validator/cif-validator';
+import { dniValidator } from './dni-validator/dni-validator';
+import { ibanValidator } from './iban-validator/iban-validator';
+import { maxLengthValidator } from './maxLength-validator/maxLength-validator';
+import { minLengthValidator } from './minLength-validator/minLength-validator';
+import { patternValidator } from './pattern-validator/pattern-validator';
 import { fileExtensionValidator } from './file-validator/file-validator';
 import { urlValidator } from './url-validator/url-validator';
 import { emailValidator } from './email-validator/email-validator';
@@ -7,6 +13,12 @@ export const NgxCustomValidators = {
   emailValidator,
   urlValidator,
   fileExtensionValidator,
+  patternValidator,
+  minLengthValidator,
+  maxLengthValidator,
+  ibanValidator,
+  dniValidator,
+  cifValidator,
 };
 
 @NgModule({

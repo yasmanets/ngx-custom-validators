@@ -18,4 +18,7 @@ script:
 
 notifications:
   email:
-    - yaser.earribas@gmail.com
+    recipients:
+      - yaser.earribas@gmail.com
+    on_success: never
+    on_failure: always

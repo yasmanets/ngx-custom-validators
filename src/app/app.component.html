@@ -60,5 +60,88 @@
       </div>
     </div>
 
+    <div class="row form-group">
+      <div class="col-12">
+        <label for="pattern">Capital letters</label>
+      </div>
+      <div class="col-6">
+        <input type="text" formControlName="pattern" class="form-control" />
+      </div>
+      <div class="col-6">
+        <div *ngIf="testForm.controls.pattern.hasError('pattern')" class="alert alert-danger">
+          Only capital letters are allowed
+        </div>
+      </div>
+    </div>
+
+    <div class="row form-group">
+      <div class="col-12">
+        <label for="minLength">Minimum length (6)</label>
+      </div>
+      <div class="col-6">
+        <input type="text" formControlName="minLength" class="form-control" />
+      </div>
+      <div class="col-6">
+        <div *ngIf="testForm.controls.minLength.hasError('minLength')" class="alert alert-danger">
+          The minimum length allowed is 6
+        </div>
+      </div>
+    </div>
+
+    <div class="row form-group">
+      <div class="col-12">
+        <label for="maxLength">Maximum length (10)</label>
+      </div>
+      <div class="col-6">
+        <input type="text" formControlName="maxLength" class="form-control" />
+      </div>
+      <div class="col-6">
+        <div *ngIf="testForm.controls.maxLength.hasError('maxLength')" class="alert alert-danger">
+          The maximum length allowed is 10
+        </div>
+      </div>
+    </div>
+
+    <div class="row form-group">
+      <div class="col-12">
+        <label for="iban">Iban</label>
+      </div>
+      <div class="col-6">
+        <input type="text" formControlName="iban" class="form-control" />
+      </div>
+      <div class="col-6">
+        <div *ngIf="testForm.controls.iban.hasError('iban')" class="alert alert-danger">
+          The IBAN has 2 letters and 20 numbers respectively
+        </div>
+      </div>
+    </div>
+
+    <div class="row form-group">
+      <div class="col-12">
+        <label for="dni">DNI</label>
+      </div>
+      <div class="col-6">
+        <input type="text" formControlName="dni" class="form-control" />
+      </div>
+      <div class="col-6">
+        <div *ngIf="testForm.controls.dni.hasError('dni')" class="alert alert-danger">
+          The DNI has 8 letters and 1 number respectively
+        </div>
+      </div>
+    </div>
+
+    <div class="row form-group">
+      <div class="col-12">
+        <label for="cif">CIF</label>
+      </div>
+      <div class="col-6">
+        <input type="text" formControlName="cif" class="form-control" />
+      </div>
+      <div class="col-6">
+        <div *ngIf="testForm.controls.cif.hasError('cif')" class="alert alert-danger">
+          The CIF has 8 letters and 1 number respectively
+        </div>
+      </div>
+    </div>
   </form>
 </div>
