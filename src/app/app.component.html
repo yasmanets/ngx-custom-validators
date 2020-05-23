@@ -101,5 +101,19 @@
         </div>
       </div>
     </div>
+
+    <div class="row form-group">
+      <div class="col-12">
+        <label for="iban">Iban</label>
+      </div>
+      <div class="col-6">
+        <input type="text" formControlName="iban" class="form-control" />
+      </div>
+      <div class="col-6">
+        <div *ngIf="testForm.controls.iban.hasError('iban')" class="alert alert-danger">
+          The iban has 2 letters and 20 numbers respectively
+        </div>
+      </div>
+    </div>
   </form>
 </div>

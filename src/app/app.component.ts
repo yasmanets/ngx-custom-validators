@@ -38,6 +38,10 @@ export class AppComponent implements OnInit {
         updateOn: 'blur'
       }),
       maxLength: new FormControl(null, NgxCustomValidators.maxLengthValidator({maxLength: true}, 10)),
+      iban: new FormControl(null, {
+        validators: NgxCustomValidators.ibanValidator({iban: true}),
+        updateOn: 'blur'
+      }),
     });
   }
 }
