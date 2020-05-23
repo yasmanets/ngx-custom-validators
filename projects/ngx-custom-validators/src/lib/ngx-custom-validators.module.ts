@@ -1,3 +1,4 @@
+import { ibanValidator } from './iban-validator/iban-validator';
 import { maxLengthValidator } from './maxLength-validator/maxLength-validator';
 import { minLengthValidator } from './minLength-validator/minLength-validator';
 import { patternValidator } from './pattern-validator/pattern-validator';
@@ -13,6 +14,7 @@ export const NgxCustomValidators = {
   patternValidator,
   minLengthValidator,
   maxLengthValidator,
+  ibanValidator,
 };
 
 @NgModule({
