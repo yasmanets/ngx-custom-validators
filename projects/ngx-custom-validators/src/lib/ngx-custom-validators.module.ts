@@ -1,3 +1,4 @@
+import { patternValidator } from './pattern-validator/pattern-validator';
 import { fileExtensionValidator } from './file-validator/file-validator';
 import { urlValidator } from './url-validator/url-validator';
 import { emailValidator } from './email-validator/email-validator';
@@ -7,6 +8,7 @@ export const NgxCustomValidators = {
   emailValidator,
   urlValidator,
   fileExtensionValidator,
+  patternValidator,
 };
 
 @NgModule({
