@@ -115,5 +115,19 @@
         </div>
       </div>
     </div>
+
+    <div class="row form-group">
+      <div class="col-12">
+        <label for="dni">DNI</label>
+      </div>
+      <div class="col-6">
+        <input type="text" formControlName="dni" class="form-control" />
+      </div>
+      <div class="col-6">
+        <div *ngIf="testForm.controls.dni.hasError('dni')" class="alert alert-danger">
+          The dni has 8 letters and 1 number respectively
+        </div>
+      </div>
+    </div>
   </form>
 </div>

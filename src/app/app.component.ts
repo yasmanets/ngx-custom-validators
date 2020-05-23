@@ -42,6 +42,10 @@ export class AppComponent implements OnInit {
         validators: NgxCustomValidators.ibanValidator({iban: true}),
         updateOn: 'blur'
       }),
+      dni: new FormControl(null, {
+        validators: NgxCustomValidators.dniValidator({dni: true}),
+        updateOn: 'blur'
+      }),
     });
   }
 }
