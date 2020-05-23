@@ -46,6 +46,10 @@ export class AppComponent implements OnInit {
         validators: NgxCustomValidators.dniValidator({dni: true}),
         updateOn: 'blur'
       }),
+      cif: new FormControl(null, {
+        validators: NgxCustomValidators.cifValidator({cif: true}),
+        updateOn: 'blur'
+      }),
     });
   }
 }

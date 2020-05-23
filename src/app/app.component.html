@@ -111,7 +111,7 @@
       </div>
       <div class="col-6">
         <div *ngIf="testForm.controls.iban.hasError('iban')" class="alert alert-danger">
-          The iban has 2 letters and 20 numbers respectively
+          The IBAN has 2 letters and 20 numbers respectively
         </div>
       </div>
     </div>
@@ -125,7 +125,21 @@
       </div>
       <div class="col-6">
         <div *ngIf="testForm.controls.dni.hasError('dni')" class="alert alert-danger">
-          The dni has 8 letters and 1 number respectively
+          The DNI has 8 letters and 1 number respectively
+        </div>
+      </div>
+    </div>
+
+    <div class="row form-group">
+      <div class="col-12">
+        <label for="cif">CIF</label>
+      </div>
+      <div class="col-6">
+        <input type="text" formControlName="cif" class="form-control" />
+      </div>
+      <div class="col-6">
+        <div *ngIf="testForm.controls.cif.hasError('cif')" class="alert alert-danger">
+          The CIF has 8 letters and 1 number respectively
         </div>
       </div>
     </div>
