@@ -13,7 +13,7 @@ export class AppComponent implements OnInit {
   public testForm: FormGroup;
 
   constructor() {
-    this.title = 'NgxCustomValidators';
+    this.title = 'Angular Custom Validators';
   }
 
   ngOnInit() {
